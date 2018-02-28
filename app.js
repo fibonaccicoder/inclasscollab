@@ -34,7 +34,7 @@ $(document).ready(function () {
 				var articleURL = $("<a>").attr("href", data.response.docs[i].web_url).text(data.response.docs[i].web_url);
 
 				articleDiv.append(headline, writtenBy, date, articleURL);
-				$("#article-div").append(articleDiv);
+				$("#articleDiv").append(articleDiv);
 
 
 			}
@@ -44,7 +44,7 @@ $(document).ready(function () {
 	}
 
 	$("#search").on("click", function (event) {
-		$("#article-div").empty();
+		$("#articleDiv").empty();
 		event.preventDefault();
 		searchTerm = $("#searchTerm1").val();
 		numRecords = $("#numberOfRecords1").val();
@@ -55,7 +55,7 @@ $(document).ready(function () {
 
 
 	$("#clear").on("click", function () {
-		$("#article-div").empty();
+		$("#articleDiv").empty();
 	})
 
 
