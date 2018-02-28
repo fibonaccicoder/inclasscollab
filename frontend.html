@@ -6,47 +6,57 @@
     <title>New York Times Scraper</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
+    <!-- <link href="app.js"> -->
 </head>
 
 <body>
     <div class="container">
         <div class="row" "border border-primary" "col-sm-12">
-            <h1>New York Times Search</h1>
+            <nav class="navbar navbar-light bg-faded">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/images/Symbol-New-York-Times.png" width="30" height="30" class="d-inline-block align-top" alt="New York Times Symbol"> New York Times Search</a>
+            </nav>
+
         </div>
         <div class="container">
-            <div class="row" "border border-primary" "col-sm-12">
-                <h1>Search Parameters</h1>
-                <form>
-                    <div class="form-group">
-                        <label for="searchTerm">Search Term:</label>
-                        <br>
-                        <input type="text" class="form-control" id="searchTerm1" placeholder="Enter search here">
+            <div class="row" "border border-primary">
+                <div class="jumbotron jumbtron-fluid">
+                    <div class="container">
+                        <h2>Search Parameters</h2>
+                        <form>
+                            <div class="form-group">
+                                <label for="searchTerm">Search Term:</label>
+                                <br>
+                                <input type="text" class="form-control" id="searchTerm1" placeholder="Enter search here">
+                            </div>
+                            <div class="form-group">
+                                <label for="numberOfRecords">Number of Records to Retrieve:</label>
+                                <br>
+                                <input type="number" class="form-control" id="numberOfRecords1" placeholder="Enter a number here">
+                            </div>
+                            <div class="form-group">
+                                <label for="startYear">Start Year (Optional):</label>
+                                <br>
+                                <input type="text" class="form-control" id="startYear1" placeholder="Enter a start year here">
+                            </div>
+                            <div class="form-group">
+                                <label for="endYear">End Year (Optional)</label>
+                                <br>
+                                <input type="text" class="form-control" id="endYear1" placeholder="Enter an end year here">
+                            </div>
+                            <button type="search" class="btn btn-primary btn-lg" id="search">Search</button>
+                            <button type="clear" class="btn btn-secondary btn-lg" id="clear">Clear Results</button>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <label for="numberOfRecords">Number of Records to Retrieve:</label>
-                        <br>
-                        <input type="number" class="form-control" id="numberOfRecords1" placeholder="Enter a number here">
-                    </div>
-                    <div class="form-group">
-                        <label for="startYear">Start Year (Optional):</label>
-                        <br>
-                        <input type="text" class="form-control" id="startYear1" placeholder="Enter a start year here">
-                    </div>
-                    <div class="form-group">
-                        <label for="endYear">End Year (Optional)</label>
-                        <br>
-                        <input type="text" class="form-control" id="endYear1" placeholder="Enter an end year here">
-                    </div>
-                    <button type="search" class="btn btn-primary btn-lg" id="search">Search</button>
-                    <button type="clear" class="btn btn-secondary btn-lg" id="clear">Clear Results</button>
-                </form>
+                </div>
             </div>
         </div>
+
         <div class="container">
             <div class="row" "border border-primary" "col-sm-12">
             </div>
-            <h1>Top Articles</h1>
-            <div id="article-div"></div>
+            <h2>Top Articles</h2>
+            <div id="articleDiv" class="articleDiv"></div>
         </div>
 
         </script>
